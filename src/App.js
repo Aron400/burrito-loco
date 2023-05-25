@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
 
-function App() {
+import IngredientCard from "./components/Ingredients/IngredientCard";
+import "./App.css";
+import IngredientsList from "./components/Ingredients/IngredientsList";
+
+const DUMMY_ING = [
+  {
+    id: "i1",
+    title: "Steak",
+  },
+  {
+    id: "i2",
+    title: "Cheese",
+  },
+];
+
+const App = () => {
+
+  const [ingredients, setIngredients] = useState(DUMMY_ING);
+
+  const addIngredientHandler = ingredient => {
+    setIngredients((prevIngredients) => {
+      return [ingredient, ...prevIngredients]
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="Header">Burrito Loco</h1>
+      <IngredientsList items={DUMMY_ING} />
     </div>
   );
 }

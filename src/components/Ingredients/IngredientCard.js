@@ -6,7 +6,7 @@ const IngredientCard = (props) => {
     return <div className="ingredients-card">
         <li>
             <div>{props.title}</div>
-            <button>Delete</button>
+            <button className="delete-ingredient">Delete</button>
         </li>
     </div>
 };

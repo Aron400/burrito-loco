@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 
+import IngredientForm from "./components/Ingredients/IngredientForm";
 import IngredientCard from "./components/Ingredients/IngredientCard";
-import "./App.css";
+
 import IngredientsList from "./components/Ingredients/IngredientsList";
 
 const DUMMY_ING = [
@@ -25,10 +26,20 @@ const App = () => {
     })
   }
 
+  const saveIngredientDataHandler = (enteredIngredientData) => {
+    const ingredientData = {
+        ...enteredIngredientData,
+        id: Math.random().toString()
+    };
+    addIngredientHandler(ingredientData);
+};
+console.log(ingredients)
+
   return (
     <div className="App">
       <h1 className="Header">Burrito Loco</h1>
-      <IngredientsList items={DUMMY_ING} />
+      <IngredientForm onAddIngredient={saveIngredientDataHandler} />
+      <IngredientsList items={ingredients} />
     </div>
   );
 }

@@ -8,8 +8,9 @@ const IngredientForm = (props) => {
 
     const saveIngredientDataHandler = (enteredIngredientData) => {
         const expenseData = {
-            ...enteredIngredientData,
-            id: Math.random().toString()
+          id: Math.random().toString(),  
+          ...enteredIngredientData,
+            
         };
         props.onAddIngredient(expenseData);
     };

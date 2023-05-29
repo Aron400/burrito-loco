@@ -1,9 +1,8 @@
 import React, {useState} from "react";
 
 import IngredientForm from "./components/Ingredients/IngredientForm";
-import IngredientCard from "./components/Ingredients/IngredientCard";
-
 import IngredientsList from "./components/Ingredients/IngredientsList";
+import BurritoResult from "./components/Submission/BurritoResult";
 
 const DUMMY_ING = [
   {
@@ -40,6 +39,7 @@ console.log(ingredients)
       <h1 className="Header">Burrito Loco</h1>
       <IngredientForm onAddIngredient={saveIngredientDataHandler} />
       <IngredientsList items={ingredients} />
+      <BurritoResult items={ingredients} />
     </div>
   );
 }

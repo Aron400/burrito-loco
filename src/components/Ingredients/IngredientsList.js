@@ -7,7 +7,7 @@ const IngredientsList = (props) => {
   return (
     <ul className="ingredients-list">
       {props.items.map((ingredient) => (
-        <IngredientCard key={ingredient.id} title={ingredient.title} />
+        <IngredientCard onDeleteIngredient={props.onDeleteIngredient} key={ingredient.id} title={ingredient.title} />
       ))}
     </ul>
   );

@@ -30,10 +30,15 @@ const IngredientForm = (props) => {
         setEnteredName('');     
       };
 
+      const clearHandler = (event) => {
+        event.preventDefault()
+        setEnteredName('')
+      }
+
   return (
     <form onSubmit={addHandler}>
-      <div className="new-expense__controls">
-        <div className="new=expense__control">
+      <div className="new-ingredient__controls">
+        <div className="new-ingredient__control">
           <label>Ingredient Name</label>
           <input
             type="text"
@@ -42,8 +47,8 @@ const IngredientForm = (props) => {
           />
         </div>
       </div>
-      <div className="new-expense__actions">
-        <button type="button">Clear</button>
+      <div className="new-ingredient__actions">
+        <button type="button" onClick={clearHandler}>Clear</button>
         <button type="submit" onClick={addHandler}>Add Ingredient</button>
       </div>
     </form>

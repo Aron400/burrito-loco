@@ -13,7 +13,6 @@ const IngredientsList = (props) => {
         // <IngredientCard onDeleteIngredient={props.onDeleteIngredient} id={ingredient.id} key={ingredient.id} title={ingredient.title} />
         <li>
             <div>{ingredient.title}</div>
-            <div>{ingredient.id}</div>
             <button onClick={onDeleteIngredient(ingredient.id)} className="delete-ingredient">Delete</button>
         </li>
       ))}

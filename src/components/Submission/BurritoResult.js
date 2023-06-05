@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const BurritoResult = (props) => {
-    // const [resultt, setResult] = useState('')
-    const [resultDisplay, setResultDisplay] = useState(false)
+    const [newResult, setNewResult] = useState('')
+    // const [resultDisplay, setResultDisplay] = useState(false)
   const [enteredNumber, setEnteredNumber] = useState("");
 
   const resultArray = props.items.map((ingredient) => (
@@ -18,10 +18,10 @@ const BurritoResult = (props) => {
 
   const generateBurrito = (event) => {
     event.preventDefault()
-setResultDisplay(true)
+setNewResult(result)
 
   }
-  console.log(resultDisplay)
+  
   console.log(result);
   console.log(enteredNumber)
 
@@ -42,8 +42,7 @@ setResultDisplay(true)
 
       <h2>Your Result</h2>
       <div>
-        {!resultDisplay && <div>press generate above for results</div>}
-        {resultDisplay && result}
+        {newResult}
       </div>
     </div>
   );

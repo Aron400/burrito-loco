@@ -35,10 +35,10 @@ const App = () => {
 console.log(ingredients)
 
   const deleteIngredientHandler = (id) => {
-    const newArray = ingredients.filter(ingredient => ingredient.id !== id);
-    console.log(newArray)
-    setIngredients(newArray);
+    const newArray = ingredients.filter((ingredient) => ingredient.id !== id);
     console.log('delete')
+    setIngredients(newArray);
+    console.log(newArray)
   }
 
 

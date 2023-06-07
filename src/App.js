@@ -30,7 +30,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Burrito Loco</h1>
+      <h1 className="Header">🌯Burrito Loco🔥</h1>
       <IngredientForm onAddIngredient={saveIngredientDataHandler} />
       <IngredientsList
         onDeleteIngredient={deleteIngredientHandler}

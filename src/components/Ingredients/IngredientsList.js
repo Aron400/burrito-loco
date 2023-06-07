@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./IngredientsList.css";
+import { BiTrash } from "react-icons/bi";
 
 const IngredientsList = (props) => {
   // Destructure onDeleteIngredient
@@ -11,7 +12,7 @@ const IngredientsList = (props) => {
       {props.items.map((ingredient) => (
         <li className="ingredients-card">
             <div>{ingredient.title}</div>
-            <button onClick={onDeleteIngredient(ingredient.id)} className="delete-ingredient">Delete</button>
+            <BiTrash onClick={onDeleteIngredient(ingredient.id)} className="delete-ingredient">Delete</BiTrash>
         </li>
       ))}
     </ul>

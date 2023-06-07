@@ -13,15 +13,22 @@ button {
   margin-right: 1rem;
 }
 
+.delete-ingredient {
+  background-color: red;
+  height: 2em;
+  width: 2em;
+  border-radius: 4px;
+}
+
 .ingredients-card {
   border-radius: 12px;
   border: 10px;
   border-color: aliceblue;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
   padding: 1rem;
-  width: 90%;
-  margin-left: 5%;
-  align-items: center;
+  width: 80%;
+  margin-left: 10%;
+  font-weight: bold;
 }
 
 li {
